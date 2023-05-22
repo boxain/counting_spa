@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #272727;
+  color: white;
+  font-family: "Baloo 2", cursive;
+}
+
+h1,
+h2,
+h3,
+h4.h5,
+h6 {
+  font-weight: 0;
+}
+
+.btn {
+  border-radius: 8%;
+  border-radius: 10%;
+  padding: 0.3rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+body {
+  section.animation_wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+
+    section.animation {
+      margin-top: 10vh;
+      height: 80vh;
+      border: 5px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .hero {
+        border: 5px solid green;
+        width: 100%;
+        height: 0%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  header {
+    nav {
+      // 沒反應
+      box-shadow: 0 8px 6px -6px black;
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          padding: 1rem 1.3rem;
+          a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.5s ease;
+            &:hover {
+              color: yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      margin: 1rem 0rem;
+      font-size: 3.5rem;
+      font-weight: bolder;
+    }
+    div.buttons {
+      margin: 0.5rem 0rem;
+      button.sortBtn {
+        margin: 0rem 0.2rem;
+        font-size: 1rem;
+      }
+    }
+
+    div.fields {
+      form {
+        margin: 1rem 0rem;
+        animation: scaleUp 0.5s ease forwards;
+      }
+      input,
+      select {
+        color: black;
+        margin: 0rem 0.5rem;
+        background-color: white;
+        border-radius: 5%;
+        padding: 0.5rem;
+      }
+      button.trash_button {
+        padding: 0.5rem;
+        background-color: #272727;
+        border: none;
+        cursor: pointer;
+        i {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    button.insert_field_button {
+      margin: 0.5rem 0rem;
+      border: none;
+      background-color: #272727;
+      i {
+        font-size: 2rem;
+        color: white;
+      }
+    }
+
+    div.result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid red;
+      margin: 0.5rem 0rem;
+      animation: border_color 8s ease infinite;
+
+      p#GPA_Text {
+        margin-top: 20px;
+        width: 100px;
+        text-align: start;
+        // 行間距
+      }
+      h2 {
+        text-align: center;
+        width: 100px;
+        border: 0;
+        font-weight: bolder;
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@keyframes border_color {
+  0% {
+    border-color: red;
+  }
+  33% {
+    border-color: lightgreen;
+  }
+  66% {
+    border-color: yellow;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 0;
+  }
+}
